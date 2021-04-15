@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 
 namespace Aula_GitHub.Models
 {
-    public class Class
+    public class Cliente
     {
+        int ClienteID { get; set; }
+        string Nome { get; set; }
     }
 }
