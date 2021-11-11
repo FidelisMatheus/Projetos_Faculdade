@@ -1,3 +1,4 @@
+using GerenciadorDeTarefas.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -6,7 +7,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Microsoft.EntityFrameworkCore;
+
 using System.Text;
+using GerenciadorDeTarefas.Repository;
+using GerenciadorDeTarefas.Repository.Impl;
 
 namespace GerenciadorDeTarefas
 {
@@ -23,7 +28,7 @@ namespace GerenciadorDeTarefas
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddDbContext<GerenciadorDeTarefasContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllers(); //adicionar controladores - configura os serviços mvc para as apis - escaneia os arquivos para encontra controllers
             services.AddSwaggerGen(c => //criar documentação do swagger
             {
@@ -51,7 +56,9 @@ namespace GerenciadorDeTarefas
 
             //ferramenta para liberar e bloquear certas fontes de entrada - bloquear alguma requisicao http
             //podemos bloquear o acesso de fontes não confiaveis
-            services.AddCors(); 
+            services.AddCors();
+
+            services.AddScoped<IUsuarioRepository, UsuarioRepositoryImpl>(); //faz um singleton
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
