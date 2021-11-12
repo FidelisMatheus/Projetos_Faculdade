@@ -21,6 +21,11 @@ namespace GerenciadorDeTarefas.Repository.Impl
             return _contexto.Usuario.Any(usuario => usuario.Email.ToLower() == email);
         }
 
+        public Usuario GetById(int idUsuario)
+        {
+            return _contexto.Usuario.FirstOrDefault(usuario => usuario.Id == idUsuario);
+        }
+
         public Usuario GetUsuarioByLoginSenha(string login, string senha)
         {//First se nao encontra devolve excessao ja o firstOrDefault devolve NULL
             return _contexto.Usuario.FirstOrDefault(usuario => usuario.Email == login.ToLower() && usuario.Senha == senha);

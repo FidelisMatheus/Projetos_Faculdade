@@ -20,13 +20,11 @@ namespace GerenciadorDeTarefas.Controllers
     {
         //atributos privados costumam ter _ na frente - <> (generico) pois precisamos apenas do loginController
         private readonly ILogger<LoginController> _logger;
-        private readonly IUsuarioRepository _usuarioRepository;
 
         //da para a api a função das depencies injection - somente no ponto que necessite realizar as dependencias
-        public LoginController(ILogger<LoginController> logger, IUsuarioRepository usuarioRepository)
+        public LoginController(ILogger<LoginController> logger, IUsuarioRepository usuarioRepository) : base(usuarioRepository)
         {
             _logger = logger;
-            _usuarioRepository = usuarioRepository;
         }
 
         [HttpPost] //precisamos aqui receber do Body o que precisamos consultar no banco - Usuario e Senha

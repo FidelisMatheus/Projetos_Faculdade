@@ -16,5 +16,6 @@ namespace GerenciadorDeTarefas.Models
 
         //mapear cada model que deve virar uma tabela
         public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<Tarefa> Tarefa { get; set; }
     }
 }

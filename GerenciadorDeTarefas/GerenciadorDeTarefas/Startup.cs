@@ -59,6 +59,7 @@ namespace GerenciadorDeTarefas
             services.AddCors();
 
             services.AddScoped<IUsuarioRepository, UsuarioRepositoryImpl>(); //faz um singleton
+            services.AddScoped<ITarefaRepository, TarefaRepositoryImpl>(); //faz um singleton
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
