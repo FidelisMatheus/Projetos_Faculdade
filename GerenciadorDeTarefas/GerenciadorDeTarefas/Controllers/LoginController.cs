@@ -1,6 +1,8 @@
 ﻿using GerenciadorDeTarefas.Dtos;
 using GerenciadorDeTarefas.Models;
+using GerenciadorDeTarefas.Repository;
 using GerenciadorDeTarefas.Services;
+using GerenciadorDeTarefas.Utils;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -18,15 +20,13 @@ namespace GerenciadorDeTarefas.Controllers
     {
         //atributos privados costumam ter _ na frente - <> (generico) pois precisamos apenas do loginController
         private readonly ILogger<LoginController> _logger;
-
-        //Usuário Mockado
-        private readonly string loginTeste = "admin@admin.com";
-        private readonly string senhaTeste = "Admin1234@";
+        private readonly IUsuarioRepository _usuarioRepository;
 
         //da para a api a função das depencies injection - somente no ponto que necessite realizar as dependencias
-        public LoginController(ILogger<LoginController> logger)
+        public LoginController(ILogger<LoginController> logger, IUsuarioRepository usuarioRepository)
         {
             _logger = logger;
+            _usuarioRepository = usuarioRepository;
         }
 
         [HttpPost] //precisamos aqui receber do Body o que precisamos consultar no banco - Usuario e Senha
@@ -37,8 +37,7 @@ namespace GerenciadorDeTarefas.Controllers
             {   //como é string precisamos verificar se a senha é nula ou vazia - assim ja dará erro ao logar
                 if (requisicao == null
                     || string.IsNullOrEmpty(requisicao.Login) || string.IsNullOrWhiteSpace(requisicao.Login)
-                    || string.IsNullOrEmpty(requisicao.Senha) || string.IsNullOrWhiteSpace(requisicao.Senha)
-                    || requisicao.Login != loginTeste || requisicao.Senha != senhaTeste)
+                    || string.IsNullOrEmpty(requisicao.Senha) || string.IsNullOrWhiteSpace(requisicao.Senha))
                 {
                     return BadRequest(new ErroRespostaDto() //erro usuario
                     {
@@ -47,20 +46,23 @@ namespace GerenciadorDeTarefas.Controllers
                     });
                 }
 
-                var usuarioTeste = new Usuario()
-                {
-                    Id = 1,
-                    Nome = "Usuário de Teste",
-                    Email = loginTeste,
-                    Senha = senhaTeste
-                };
+                var usuario = _usuarioRepository.GetUsuarioByLoginSenha(requisicao.Login, MD5Utils.GerarHashMD5(requisicao.Senha));
 
-                var token = TokenService.CriarToken(usuarioTeste); //como criar um novo token
+                if(usuario == null)
+                {
+                    return BadRequest(new ErroRespostaDto() //erro usuario
+                    {
+                        Status = StatusCodes.Status400BadRequest,
+                        Erro = "Parâmetros de entrada inválidos"
+                    });
+                }
+
+                var token = TokenService.CriarToken(usuario); //como criar um novo token
 
                 return Ok(new LoginRespostaDto()
                 {
-                    Email = usuarioTeste.Email,
-                    Nome = usuarioTeste.Nome,
+                    Email = usuario.Email,
+                    Nome = usuario.Nome,
                     Token = token
                 }); //certo
             }
