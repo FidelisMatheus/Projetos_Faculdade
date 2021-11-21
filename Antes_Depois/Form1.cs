@@ -43,6 +43,7 @@ namespace Antes_Depois
                 image2 = new Bitmap(openFileDialog1.FileName);
                 pictureBox2.Image = image2;
             }
+            pictureBox3.Image = null;
         }
 
         private void cmdResultado_Click(object sender, EventArgs e)
