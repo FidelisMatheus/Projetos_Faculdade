@@ -36,6 +36,7 @@ namespace Antes_Depois
             this.cmdImage1 = new System.Windows.Forms.Button();
             this.cmdImage2 = new System.Windows.Forms.Button();
             this.cmdResultado = new System.Windows.Forms.Button();
+            this.cmdLimpar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -43,27 +44,30 @@ namespace Antes_Depois
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(41, 113);
+            this.pictureBox1.Location = new System.Drawing.Point(55, 139);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 250);
+            this.pictureBox1.Size = new System.Drawing.Size(333, 308);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(348, 113);
+            this.pictureBox2.Location = new System.Drawing.Point(464, 139);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(250, 250);
+            this.pictureBox2.Size = new System.Drawing.Size(333, 308);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(659, 113);
+            this.pictureBox3.Location = new System.Drawing.Point(879, 139);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(250, 250);
+            this.pictureBox3.Size = new System.Drawing.Size(333, 308);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
@@ -74,47 +78,83 @@ namespace Antes_Depois
             // 
             // cmdImage1
             // 
-            this.cmdImage1.Location = new System.Drawing.Point(41, 62);
+            this.cmdImage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmdImage1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdImage1.FlatAppearance.BorderSize = 0;
+            this.cmdImage1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdImage1.Font = new System.Drawing.Font("Unispace", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdImage1.Location = new System.Drawing.Point(55, 69);
+            this.cmdImage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmdImage1.Name = "cmdImage1";
-            this.cmdImage1.Size = new System.Drawing.Size(146, 23);
+            this.cmdImage1.Size = new System.Drawing.Size(333, 43);
             this.cmdImage1.TabIndex = 3;
             this.cmdImage1.Text = "Imagem de Antes";
-            this.cmdImage1.UseVisualStyleBackColor = true;
+            this.cmdImage1.UseVisualStyleBackColor = false;
             this.cmdImage1.Click += new System.EventHandler(this.cmdImage1_Click);
             // 
             // cmdImage2
             // 
-            this.cmdImage2.Location = new System.Drawing.Point(348, 62);
+            this.cmdImage2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmdImage2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdImage2.FlatAppearance.BorderSize = 0;
+            this.cmdImage2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdImage2.Font = new System.Drawing.Font("Unispace", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdImage2.Location = new System.Drawing.Point(464, 69);
+            this.cmdImage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmdImage2.Name = "cmdImage2";
-            this.cmdImage2.Size = new System.Drawing.Size(146, 23);
+            this.cmdImage2.Size = new System.Drawing.Size(333, 43);
             this.cmdImage2.TabIndex = 4;
             this.cmdImage2.Text = "Imagem de Depois";
-            this.cmdImage2.UseVisualStyleBackColor = true;
+            this.cmdImage2.UseVisualStyleBackColor = false;
             this.cmdImage2.Click += new System.EventHandler(this.cmdImage2_Click);
             // 
             // cmdResultado
             // 
-            this.cmdResultado.Location = new System.Drawing.Point(659, 62);
+            this.cmdResultado.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmdResultado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdResultado.FlatAppearance.BorderSize = 0;
+            this.cmdResultado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdResultado.Font = new System.Drawing.Font("Unispace", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdResultado.Location = new System.Drawing.Point(879, 69);
+            this.cmdResultado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmdResultado.Name = "cmdResultado";
-            this.cmdResultado.Size = new System.Drawing.Size(146, 23);
+            this.cmdResultado.Size = new System.Drawing.Size(333, 43);
             this.cmdResultado.TabIndex = 5;
             this.cmdResultado.Text = "Mudança";
-            this.cmdResultado.UseVisualStyleBackColor = true;
+            this.cmdResultado.UseVisualStyleBackColor = false;
             this.cmdResultado.Click += new System.EventHandler(this.cmdResultado_Click);
+            // 
+            // cmdLimpar
+            // 
+            this.cmdLimpar.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.cmdLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmdLimpar.FlatAppearance.BorderSize = 0;
+            this.cmdLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmdLimpar.Font = new System.Drawing.Font("Unispace", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdLimpar.Location = new System.Drawing.Point(1046, 551);
+            this.cmdLimpar.Name = "cmdLimpar";
+            this.cmdLimpar.Size = new System.Drawing.Size(166, 43);
+            this.cmdLimpar.TabIndex = 6;
+            this.cmdLimpar.Text = "Limpar";
+            this.cmdLimpar.UseVisualStyleBackColor = false;
+            this.cmdLimpar.Click += new System.EventHandler(this.cmdLimpar_Click);
             // 
             // AntesDepois
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1009, 566);
+            this.ClientSize = new System.Drawing.Size(1345, 697);
+            this.Controls.Add(this.cmdLimpar);
             this.Controls.Add(this.cmdResultado);
             this.Controls.Add(this.cmdImage2);
             this.Controls.Add(this.cmdImage1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AntesDepois";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Mudança pós queimadas";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -131,6 +171,7 @@ namespace Antes_Depois
         private System.Windows.Forms.Button cmdImage1;
         private System.Windows.Forms.Button cmdImage2;
         private System.Windows.Forms.Button cmdResultado;
+        private System.Windows.Forms.Button cmdLimpar;
     }
 }
 

@@ -36,6 +36,13 @@ namespace Antes_Depois
             }
         }
 
+        private void cmdLimpar_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = null;
+            pictureBox2.Image = null;
+            pictureBox3.Image = null;
+        }
+
         private void cmdImage2_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
