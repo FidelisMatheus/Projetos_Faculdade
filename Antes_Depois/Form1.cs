@@ -41,6 +41,21 @@ namespace Antes_Depois
             pictureBox1.Image = null;
             pictureBox2.Image = null;
             pictureBox3.Image = null;
+
+            image1 = null;
+            image2 = null;
+            image3 = null;
+
+
+            //ligando a biblioteca python
+            ProcessStartInfo apagar = new ProcessStartInfo();
+            apagar.FileName = "Python.exe";
+            apagar.Arguments = "Apagar.py";
+            apagar.UseShellExecute = false;
+            apagar.RedirectStandardOutput = true;
+            System.Diagnostics.Process.Start(apagar);
+
+            System.Threading.Thread.Sleep(3000);
         }
 
         private void cmdImage2_Click(object sender, EventArgs e)
@@ -56,8 +71,8 @@ namespace Antes_Depois
         private void cmdResultado_Click(object sender, EventArgs e)
         {
             //Salvando a imagem no caminho do debug colocando o formato Bitmap
-            pictureBox1.Image.Save(caminhoExecutavel() + "Antes.png", System.Drawing.Imaging.ImageFormat.Bmp);
-            pictureBox2.Image.Save(caminhoExecutavel() + "Depois.png", System.Drawing.Imaging.ImageFormat.Bmp);
+            pictureBox1.Image.Save(caminhoExecutavel() + "Antes.jpg", System.Drawing.Imaging.ImageFormat.Bmp);
+            pictureBox2.Image.Save(caminhoExecutavel() + "Depois.jpg", System.Drawing.Imaging.ImageFormat.Bmp);
 
             //ligando a biblioteca python
             ProcessStartInfo x = new ProcessStartInfo();
@@ -69,7 +84,7 @@ namespace Antes_Depois
 
             System.Threading.Thread.Sleep(3000);
 
-            image3 = new Bitmap(Image.FromFile(caminhoExecutavel() + "Resultado.png"));
+            image3 = new Bitmap(Image.FromFile(caminhoExecutavel() + "Resultado.jpg"));
             pictureBox3.Image = image3;
         }
 
