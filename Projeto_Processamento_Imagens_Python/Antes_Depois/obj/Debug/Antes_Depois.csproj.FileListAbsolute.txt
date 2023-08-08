@@ -1,0 +1,20 @@
+D:\Faculdade\6º periodo\Processamento_de_Imagens\TrabalhoFinal\Antes_Depois\Antes_Depois\bin\Debug\Antes_Depois.exe.config
+D:\Faculdade\6º periodo\Processamento_de_Imagens\TrabalhoFinal\Antes_Depois\Antes_Depois\bin\Debug\Antes_Depois.exe
+D:\Faculdade\6º periodo\Processamento_de_Imagens\TrabalhoFinal\Antes_Depois\Antes_Depois\bin\Debug\Antes_Depois.pdb
+D:\Faculdade\6º periodo\Processamento_de_Imagens\TrabalhoFinal\Antes_Depois\Antes_Depois\obj\Debug\Antes_Depois.csproj.AssemblyReference.cache
+D:\Faculdade\6º periodo\Processamento_de_Imagens\TrabalhoFinal\Antes_Depois\Antes_Depois\obj\Debug\Antes_Depois.AntesDepois.resources
+D:\Faculdade\6º periodo\Processamento_de_Imagens\TrabalhoFinal\Antes_Depois\Antes_Depois\obj\Debug\Antes_Depois.Properties.Resources.resources
+D:\Faculdade\6º periodo\Processamento_de_Imagens\TrabalhoFinal\Antes_Depois\Antes_Depois\obj\Debug\Antes_Depois.csproj.GenerateResource.cache
+D:\Faculdade\6º periodo\Processamento_de_Imagens\TrabalhoFinal\Antes_Depois\Antes_Depois\obj\Debug\Antes_Depois.csproj.CoreCompileInputs.cache
+D:\Faculdade\6º periodo\Processamento_de_Imagens\TrabalhoFinal\Antes_Depois\Antes_Depois\obj\Debug\Antes_Depois.exe
+D:\Faculdade\6º periodo\Processamento_de_Imagens\TrabalhoFinal\Antes_Depois\Antes_Depois\obj\Debug\Antes_Depois.pdb
+C:\Users\Usuário\Documents\GitHub\Processamento_de_Imagens_Python\Antes_Depois\bin\Debug\Antes_Depois.exe.config
+C:\Users\Usuário\Documents\GitHub\Processamento_de_Imagens_Python\Antes_Depois\bin\Debug\Antes_Depois.exe
+C:\Users\Usuário\Documents\GitHub\Processamento_de_Imagens_Python\Antes_Depois\bin\Debug\Antes_Depois.pdb
+C:\Users\Usuário\Documents\GitHub\Processamento_de_Imagens_Python\Antes_Depois\obj\Debug\Antes_Depois.csproj.AssemblyReference.cache
+C:\Users\Usuário\Documents\GitHub\Processamento_de_Imagens_Python\Antes_Depois\obj\Debug\Antes_Depois.AntesDepois.resources
+C:\Users\Usuário\Documents\GitHub\Processamento_de_Imagens_Python\Antes_Depois\obj\Debug\Antes_Depois.Properties.Resources.resources
+C:\Users\Usuário\Documents\GitHub\Processamento_de_Imagens_Python\Antes_Depois\obj\Debug\Antes_Depois.csproj.GenerateResource.cache
+C:\Users\Usuário\Documents\GitHub\Processamento_de_Imagens_Python\Antes_Depois\obj\Debug\Antes_Depois.csproj.CoreCompileInputs.cache
+C:\Users\Usuário\Documents\GitHub\Processamento_de_Imagens_Python\Antes_Depois\obj\Debug\Antes_Depois.exe
+C:\Users\Usuário\Documents\GitHub\Processamento_de_Imagens_Python\Antes_Depois\obj\Debug\Antes_Depois.pdb
